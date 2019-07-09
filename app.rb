@@ -4,7 +4,7 @@ set  :session_secret,"super secret"
 
 class Battle < Sinatra::Base
 	get '/' do
-		'Do Battle!'
+		'Testing infrastructure working!'
 	end
 	
 	# start the server if ruby file executed directly
