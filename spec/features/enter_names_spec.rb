@@ -13,3 +13,13 @@ feature 'Enter Names' do
     expect(page).to have_content "Ben vs. Freddie"
   end
 end
+
+feature 'Display Hit Points' do
+  scenario 'Displays player hit points on the screen during game' do
+    visit('/')
+    fill_in :player_1_name, with: "Man"
+    fill_in :player_2_name, with: "Car"
+    click_button 'Submit'
+    expect(page).to have_content "Car = 100HP"
+  end
+end
