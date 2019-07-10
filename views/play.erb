@@ -1,11 +1,11 @@
 <%= @player_1_name %> vs. <%= @player_2_name %><br>
-<%= @player_1_name %> = 100HP <br>
-<%= @player_2_name %> = 100HP
+<%= @player_1_name %> = <%= @player_1_hp %>HP <br>
+<%= @player_2_name %> = <%= @player_2_hp %>HP <br>
 <!-- <a href="/attack">Attack</a> -->
 <form action="/attack">
   <input type="submit" value="Attack!">
 </form>
 <br>
 <% if @attack %>
-  <%= @player_2_name %> attacked <%= @player_1_name %>!
+  <%= @player_1_name %> attacked <%= @player_2_name %>!
 <% end %>
